@@ -1,0 +1,116 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+}
+body{
+  background-color: black;
+  place-items: center center;
+  font-family: 'Poppins',sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1{
+  color: white;
+  padding-top: 120px;
+  text-align: center;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  padding: 60px;
+  grid-gap: 40px;
+}
+.card{
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* image of each card */
+.profile-img{
+  position: relative;
+  transition: all 0.9s;
+  box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+
+.card:hover .profile-img{
+  background-color: black;
+  opacity: 20%;
+}
+
+img{
+  /* set width to 100% to have reflexive images */
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.details{
+  padding: 20px 10px;
+  width: 100%;
+  z-index: 1;
+
+  /* the icons use up 60px, use the below 2 lines to hide it: */
+  position: relative;
+  top: -60px;
+}
+
+
+.details>h3{
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+
+.details>p{
+  color: #a0a0a0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+  /**** Social Icons *****/
+  .social-icons {
+    z-index: 2;
+    display: flex;
+    background-color: transparent;
+  }
+
+  .social-icons li {
+    list-style: none;
+  }
+
+  .social-icons .icon{
+    width: 60px;
+    height: 60px;
+    transform: translateY(300px);
+    transition: 0.0s;
+    padding: 5px;
+  }
+
+  .card:hover .icon{
+    width: 60px;
+    height: 60px;
+    transform: translateY(-200px);
+    transition: 1s ;
+  }
+  
+  .card:hover li:nth-child(1) .icon {
+    transition-delay: 0.1s;
+  }
+  
+  .card:hover li:nth-child(2) .icon {
+    transition-delay: 0.2s;
+  }
+  
+  .card:hover li:nth-child(3) .icon {
+    transition-delay: 0.3s;
+  }
+  
+  .card:hover li:nth-child(4) .icon {
+    transition-delay: 0.4s;
+  }
+
