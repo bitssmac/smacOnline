@@ -1,8 +1,11 @@
 # adding preloader:
 - add stylesheet to header:
+```html
     <!-- for the loading circle-->
     <link rel="stylesheet" href="css/preloader/preloader.css">
+```
 - add to the start of the body:
+```html
     <!-- preloader section -->
     <section class="preloader">
         <div class="sk-circle">
@@ -20,7 +23,10 @@
         <div class="sk-circle12 sk-child"></div>
       </div>
     </section>
+```
 - add the javascript to the end of the body:
+```html
     <!-- Pre Loader js -->
     <script src="js/jquery.js"></script>
     <script src="js/preloader/preloader.js"></script>
+```
