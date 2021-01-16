@@ -1,5 +1,5 @@
 # Blog Home html:
-* add a imput in radio
+* add a input in radio
 * add a fs-slide
 * add a quick navigation label
 * add a pre navigation label 
