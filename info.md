@@ -1,5 +1,5 @@
 # adding preloader:
-- add stylesheet to header:
+- add stylesheet to head:
 ```html
     <!-- for the loading circle-->
     <link rel="stylesheet" href="css/preloader/preloader.css">
