@@ -61,9 +61,9 @@
   .navbar-left-img{
     float: left;
     display: block;
-    width: 120px;
-    height: 120px;
-    padding: 5px;
+    width: 60pxpx;
+    height: 60pxpx;
+    padding: 2px;
   }
 
   /* Main content */
