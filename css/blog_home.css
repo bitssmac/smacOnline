@@ -139,14 +139,14 @@ body {
 .slideshow .slide .title {
   margin: 0 auto 15px;
   max-width: 1000px;
-  font: 300 50px/1.2 "Oswald", sans-serif;
+  font: 300 3vw "Oswald", sans-serif;
   letter-spacing: 0.35em;
   text-transform: uppercase;
 }
 .slideshow .slide .text {
   margin: 0 auto;
   max-width: 1000px;
-  font-size: 18px;
+  font-size: 2vw;
   line-height: 1.4;
 }
 .slideshow .slide .btn {
