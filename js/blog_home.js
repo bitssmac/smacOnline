@@ -1,160 +1,220 @@
-const $window = $(window);
-const $body = $('body');
+var slideshowDuration = 4000;
+var slideshow=$('.main-content .slideshow');
 
-class Slideshow {
-	constructor (userOptions = {}) {
-    const defaultOptions = {
-      $el: $('.slideshow'),
-      showArrows: false,
-      showPagination: true,
-      duration: 10000,
-      autoplay: true
-    }
-    
-    let options = Object.assign({}, defaultOptions, userOptions);
-    
-		this.$el = options.$el;
-		this.maxSlide = this.$el.find($('.js-slider-home-slide')).length;
-    this.showArrows = this.maxSlide > 1 ? options.showArrows : false;
-    this.showPagination = options.showPagination;
-		this.currentSlide = 1;
-		this.isAnimating = false;
-		this.animationDuration = 1200;
-		this.autoplaySpeed = options.duration;
-		this.interval;
-		this.$controls = this.$el.find('.js-slider-home-button');
-    this.autoplay = this.maxSlide > 1 ? options.autoplay : false;
+function slideshowSwitch(slideshow,index,auto){
+  if(slideshow.data('wait')) return;
 
-		this.$el.on('click', '.js-slider-home-next', (event) => this.nextSlide());
-		this.$el.on('click', '.js-slider-home-prev', (event) => this.prevSlide());
-    this.$el.on('click', '.js-pagination-item', event => {
-      if (!this.isAnimating) {
-        this.preventClick();
-  this.goToSlide(event.target.dataset.slide);
-      }
+  var slides = slideshow.find('.slide');
+  var pages = slideshow.find('.pagination');
+  var activeSlide = slides.filter('.is-active');
+  var activeSlideImage = activeSlide.find('.image-container');
+  var newSlide = slides.eq(index);
+  var newSlideImage = newSlide.find('.image-container');
+  var newSlideContent = newSlide.find('.slide-content');
+  var newSlideElements=newSlide.find('.caption > *');
+  if(newSlide.is(activeSlide))return;
+
+  newSlide.addClass('is-new');
+  var timeout=slideshow.data('timeout');
+  clearTimeout(timeout);
+  slideshow.data('wait',true);
+  var transition=slideshow.attr('data-transition');
+  if(transition=='fade'){
+    newSlide.css({
+      display:'block',
+      zIndex:2
+    });
+    newSlideImage.css({
+      opacity:0
     });
 
-		this.init();
-	}
-  
-  init() {
-    this.goToSlide(1);
-    if (this.autoplay) {
-      this.startAutoplay();
+    TweenMax.to(newSlideImage,1,{
+      alpha:1,
+      onComplete:function(){
+        newSlide.addClass('is-active').removeClass('is-new');
+        activeSlide.removeClass('is-active');
+        newSlide.css({display:'',zIndex:''});
+        newSlideImage.css({opacity:''});
+        slideshow.find('.pagination').trigger('check');
+        slideshow.data('wait',false);
+        if(auto){
+          timeout=setTimeout(function(){
+            slideshowNext(slideshow,false,true);
+          },slideshowDuration);
+          slideshow.data('timeout',timeout);}}});
+  } else {
+    if(newSlide.index()>activeSlide.index()){
+      var newSlideRight=0;
+      var newSlideLeft='auto';
+      var newSlideImageRight=-slideshow.width()/8;
+      var newSlideImageLeft='auto';
+      var newSlideImageToRight=0;
+      var newSlideImageToLeft='auto';
+      var newSlideContentLeft='auto';
+      var newSlideContentRight=0;
+      var activeSlideImageLeft=-slideshow.width()/4;
+    } else {
+      var newSlideRight='';
+      var newSlideLeft=0;
+      var newSlideImageRight='auto';
+      var newSlideImageLeft=-slideshow.width()/8;
+      var newSlideImageToRight='';
+      var newSlideImageToLeft=0;
+      var newSlideContentLeft=0;
+      var newSlideContentRight='auto';
+      var activeSlideImageLeft=slideshow.width()/4;
     }
-    
-    if (this.showPagination) {
-      let paginationNumber = this.maxSlide;
-      let pagination = '<div class="pagination"><div class="container">';
-      
-      for (let i = 0; i < this.maxSlide; i++) {
-        let item = `<span class="pagination__item js-pagination-item ${ i === 0 ? 'is-current' : ''}" data-slide=${i + 1}>${i + 1}</span>`;
-        pagination  = pagination + item;
+
+    newSlide.css({
+      display:'block',
+      width:0,
+      right:newSlideRight,
+      left:newSlideLeft
+      ,zIndex:2
+    });
+
+    newSlideImage.css({
+      width:slideshow.width(),
+      right:newSlideImageRight,
+      left:newSlideImageLeft
+    });
+
+    newSlideContent.css({
+      width:slideshow.width(),
+      left:newSlideContentLeft,
+      right:newSlideContentRight
+    });
+
+    activeSlideImage.css({
+      left:0
+    });
+
+    TweenMax.set(newSlideElements,{y:20,force3D:true});
+    TweenMax.to(activeSlideImage,1,{
+      left:activeSlideImageLeft,
+      ease:Power3.easeInOut
+    });
+
+    TweenMax.to(newSlide,1,{
+      width:slideshow.width(),
+      ease:Power3.easeInOut
+    });
+
+    TweenMax.to(newSlideImage,1,{
+      right:newSlideImageToRight,
+      left:newSlideImageToLeft,
+      ease:Power3.easeInOut
+    });
+
+    TweenMax.staggerFromTo(newSlideElements,0.8,{alpha:0,y:60},{alpha:1,y:0,ease:Power3.easeOut,force3D:true,delay:0.6},0.1,function(){
+      newSlide.addClass('is-active').removeClass('is-new');
+      activeSlide.removeClass('is-active');
+      newSlide.css({
+        display:'',
+        width:'',
+        left:'',
+        zIndex:''
+      });
+
+      newSlideImage.css({
+        width:'',
+        right:'',
+        left:''
+      });
+
+      newSlideContent.css({
+        width:'',
+        left:''
+      });
+
+      newSlideElements.css({
+        opacity:'',
+        transform:''
+      });
+
+      activeSlideImage.css({
+        left:''
+      });
+
+      slideshow.find('.pagination').trigger('check');
+      slideshow.data('wait',false);
+      if(auto){
+        timeout=setTimeout(function(){
+          slideshowNext(slideshow,false,true);
+        },slideshowDuration);
+        slideshow.data('timeout',timeout);
       }
-      
-      pagination = pagination + '</div></div>';
-      
-      this.$el.append(pagination);
-    }
+    });
   }
-  
-  preventClick() {
-		this.isAnimating = true;
-		this.$controls.prop('disabled', true);
-		clearInterval(this.interval);
-
-		setTimeout(() => {
-			this.isAnimating = false;
-			this.$controls.prop('disabled', false);
-      if (this.autoplay) {
-			  this.startAutoplay();
-      }
-		}, this.animationDuration);
-	}
-
-	goToSlide(index) {    
-    this.currentSlide = parseInt(index);
-    
-    if (this.currentSlide > this.maxSlide) {
-      this.currentSlide = 1;
-    }
-    
-    if (this.currentSlide === 0) {
-      this.currentSlide = this.maxSlide;
-    }
-    
-    const newCurrent = this.$el.find('.js-slider-home-slide[data-slide="'+ this.currentSlide +'"]');
-    const newPrev = this.currentSlide === 1 ? this.$el.find('.js-slider-home-slide').last() : newCurrent.prev('.js-slider-home-slide');
-    const newNext = this.currentSlide === this.maxSlide ? this.$el.find('.js-slider-home-slide').first() : newCurrent.next('.js-slider-home-slide');
-    
-    this.$el.find('.js-slider-home-slide').removeClass('is-prev is-next is-current');
-    this.$el.find('.js-pagination-item').removeClass('is-current');
-    
-		if (this.maxSlide > 1) {
-      newPrev.addClass('is-prev');
-      newNext.addClass('is-next');
-    }
-    
-    newCurrent.addClass('is-current');
-    this.$el.find('.js-pagination-item[data-slide="'+this.currentSlide+'"]').addClass('is-current');
-  }
-  
-  nextSlide() {
-    this.preventClick();
-    this.goToSlide(this.currentSlide + 1);
-	}
-   
-	prevSlide() {
-    this.preventClick();
-    this.goToSlide(this.currentSlide - 1);
-	}
-
-	startAutoplay() {
-		this.interval = setInterval(() => {
-			if (!this.isAnimating) {
-				this.nextSlide();
-			}
-		}, this.autoplaySpeed);
-	}
-
-	destroy() {
-		this.$el.off();
-	}
 }
 
-(function() {
-	let loaded = false;
-	let maxLoad = 3000;  
-  
-	function load() {
-		const options = {
-      showPagination: true
-    };
+function slideshowNext(slideshow,previous,auto){
+  var slides=slideshow.find('.slide');
+  var activeSlide=slides.filter('.is-active');
+  var newSlide=null;
+  if(previous){
+    newSlide=activeSlide.prev('.slide');
+    if(newSlide.length === 0) {
+      newSlide=slides.last();
+    }
+  } else {
+    newSlide=activeSlide.next('.slide');
+    if(newSlide.length==0)
+      newSlide=slides.filter('.slide').first();
+  }
 
-    let slideShow = new Slideshow(options);
-	}
-  
-	function addLoadClass() {
-		$body.addClass('is-loaded');
+  slideshowSwitch(slideshow,newSlide.index(),auto);
+}
 
-		setTimeout(function() {
-			$body.addClass('is-animated');
-		}, 600);
-	}
-  
-	$window.on('load', function() {
-		if(!loaded) {
-			loaded = true;
-			load();
-		}
-	});
-  
-	setTimeout(function() {
-		if(!loaded) {
-			loaded = true;
-			load();
-		}
-	}, maxLoad);
+function homeSlideshowParallax(){
+  var scrollTop=$(window).scrollTop();
+  if(scrollTop>windowHeight) return;
+  var inner=slideshow.find('.slideshow-inner');
+  var newHeight=windowHeight-(scrollTop/2);
+  var newTop=scrollTop*0.8;
 
-	addLoadClass();
-})();
+  inner.css({
+    transform:'translateY('+newTop+'px)',height:newHeight
+  });
+}
+
+$(document).ready(function() {
+ $('.slide').addClass('is-loaded');
+
+ $('.slideshow .arrows .arrow').on('click',function(){
+  slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
+});
+
+ $('.slideshow .pagination .item').on('click',function(){
+  slideshowSwitch($(this).closest('.slideshow'),$(this).index());
+});
+
+ $('.slideshow .pagination').on('check',function(){
+  var slideshow=$(this).closest('.slideshow');
+  var pages=$(this).find('.item');
+  var index=slideshow.find('.slides .is-active').index();
+  pages.removeClass('is-active');
+  pages.eq(index).addClass('is-active');
+});
+
+/* Lazyloading
+$('.slideshow').each(function(){
+  var slideshow=$(this);
+  var images=slideshow.find('.image').not('.is-loaded');
+  images.on('loaded',function(){
+    var image=$(this);
+    var slide=image.closest('.slide');
+    slide.addClass('is-loaded');
+  });
+*/
+
+var timeout=setTimeout(function(){
+  slideshowNext(slideshow,false,true);
+},slideshowDuration);
+
+slideshow.data('timeout',timeout);
+});
+
+if($('.main-content .slideshow').length > 1) {
+  $(window).on('scroll',homeSlideshowParallax);
+}

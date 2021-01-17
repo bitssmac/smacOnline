@@ -2,104 +2,127 @@
 <html lang="en">
 <head>
 
-    <!-- credit: Alexander Erlandsson for free front end, http://codepen.io/alexerlandsson/pen/RaZdox-->
-
 	<meta charset="utf-8">
 
-    <title>BLOGS</title>
+    <title>slides</title>
     <link rel="shortcut icon" href="images/samc-logo.png" type="image/x-icon">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
     <meta name="description" content="">
-    
-    <!-- stylesheets css -->
-    <link rel="stylesheet" href="css/blog_home.css">
-    <!-- for the loading circle-->
-    <link rel="stylesheet" href="css/preloader/preloader.css">
 
+    <link rel="stylesheet" href="css/blog_home.css">
+    
 </head>
 <body>
+    <main class="main-content">
 
-    <!-- preloader section -->
-    <section class="preloader">
-        <div class="sk-circle">
-        <div class="sk-circle1 sk-child"></div>
-        <div class="sk-circle2 sk-child"></div>
-        <div class="sk-circle3 sk-child"></div>
-        <div class="sk-circle4 sk-child"></div>
-        <div class="sk-circle5 sk-child"></div>
-        <div class="sk-circle6 sk-child"></div>
-        <div class="sk-circle7 sk-child"></div>
-        <div class="sk-circle8 sk-child"></div>
-        <div class="sk-circle9 sk-child"></div>
-        <div class="sk-circle10 sk-child"></div>
-        <div class="sk-circle11 sk-child"></div>
-        <div class="sk-circle12 sk-child"></div>
-      </div>
-    </section>
-
-    <div class="container">
-	
-        <div data-am-fadeshow="next-prev-navigation">
-    
-            <!-- Radio -->
-            <input type="radio" name="css-fadeshow" id="slide-1" />
-            <input type="radio" name="css-fadeshow" id="slide-2" />
-            <input type="radio" name="css-fadeshow" id="slide-3" />
-            <input type="radio" name="css-fadeshow" id="slide-4" />
-            
-            <!-- Slides -->
-            <div class="fs-slides">
-                <div class="fs-slide" style="background-image: url(images/blogs/blog_home/bits-dark.png);">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
-                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 5vw; font-weight: bold;">SMAC Blog</h1>
-                        <!-- <p style="font-size: 2vw; font-weight: 100; margin-top: 0;">Easy to implement and use on <strong>your</strong> site!</p> -->
-                    </div>
+        <section class="slideshow">
+          <div class="slideshow-inner">
+            <div class="slides">
+              <!-- slide 1 -->
+              <div class="slide is-active ">
+                <div class="slide-content">
+                  <div class="caption">
+                    <div class="title">FIRE EMERGENCY</div>
+                    <div class="text">
+                      <p>Safety protocol and information</p>
+                    </div> 
+                    <a href="blog_pages/template/template.html" class="btn">
+                      <span class="btn-inner">Learn More</span>
+                    </a>
+                  </div>
                 </div>
-                <!-- blog 1 -->
-                <div class="fs-slide" style="background-image: url(images/blogs/blog_home/fire_estinguisher.jpg);">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
-                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 5vw; font-weight: bold;">Fire Emergency</h1>
-                        <p style="font-size: 2vw; font-weight: 100; margin-top: 0;">safety protocols and information</p>
-                    </div>
+                <div class="image-container"> 
+                  <img src="images/blogs/blog_home/fireest.jpg" alt="" class="image" />
                 </div>
-                <!-- blog 2 -->
-                <div class="fs-slide" style="background-image: url(https://images.unsplash.com/photo-1449057528837-7ca097b3520c?crop=entropy&fit=crop&fm=jpg&h=1325&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=2500);"></div>
-                <!-- blog 3 -->
-                <div class="fs-slide" style="background-image: url(https://images.unsplash.com/photo-1449057528837-7ca097b3520c?crop=entropy&fit=crop&fm=jpg&h=1325&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=2500);"></div>
-            </div>
-    
-            <!-- Quick Navigation -->
-            <div class="fs-quick-nav">
-                <label class="fs-quick-btn" for="slide-1"></label>
-                <label class="fs-quick-btn" for="slide-2"></label>
-                <label class="fs-quick-btn" for="slide-3"></label>
-                <label class="fs-quick-btn" for="slide-4"></label>
-            </div>
-            
-            <!-- Prev Navigation -->
-            <div class="fs-prev-nav">
-                <label class="fs-prev-btn" for="slide-1"></label>
-                <label class="fs-prev-btn" for="slide-2"></label>
-                <label class="fs-prev-btn" for="slide-3"></label>
-                <label class="fs-prev-btn" for="slide-4"></label>
-            </div>
-            
-            <!-- Next Navigation -->
-            <div class="fs-next-nav">
-                <label class="fs-next-btn" for="slide-1"></label>
-                <label class="fs-next-btn" for="slide-2"></label>
-                <label class="fs-next-btn" for="slide-3"></label>
-                <label class="fs-next-btn" for="slide-4"></label>
-            </div>
-    
-        </div>
-        
-    </div>
+              </div>
+              <!-- slide 2 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="caption">
+                    <div class="title">blog 2 Title</div>
+                    <div class="text">
+                      <p>Blog 2 description</p>
+                    </div> 
+                    <a href="blog_pages/template/template.html" class="btn">
+                      <span class="btn-inner">Learn More</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-container">
+                  <img src="images/blogs/blog_home/bits-dark.png" alt="" class="image" />
+                </div>
+              </div>
+              <!-- slide 3 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="caption">
+                    <div class="title">blog 3 title</div>
+                    <div class="text">
+                      <p>Blog 3 description</p>
+                    </div> 
+                    <a href="blog_pages/template/template.html" class="btn">
+                      <span class="btn-inner">Learn More</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-container">
+                  <img src="images/blogs/blog_home/bits-dark.png" alt="" class="image" />
+                </div>
+              </div>
+              <!-- slide 4 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="caption">
+                    <div class="title">blog 4 Title</div>
+                    <div class="text">
+                      <p>blog 4 description</p>
+                    </div> 
+                    <a href="index.html" class="btn">
+                      <span class="btn-inner">Learn More</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-container">
+                  <img src="images/blogs/blog_home/bits-dark.png" alt="" class="image" />
+                </div>
+              </div>
 
-    <!-- Pre Loader js -->
-    <script src="js/jquery.js"></script>
-    <script src="js/preloader/preloader.js"></script>
+            </div>
+            <div class="pagination">
+              <div class="item is-active"> 
+                <span class="icon">1</span>
+              </div>
+              <div class="item">
+                <span class="icon">2</span>
+              </div>
+              <div class="item">
+                <span class="icon">3</span>
+              </div>
+              <div class="item">
+                <span class="icon">4</span>
+              </div>
+            </div>
+            <div class="arrows">
+              <div class="arrow prev">
+                <span class="svg svg-arrow-left">
+                  <svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z"/> </svg>
+                  <span class="alt sr-only"></span>
+                </span>
+              </div>
+              <div class="arrow next">
+                <span class="svg svg-arrow-right">
+                  <svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z"/> </svg>
+                  <span class="alt sr-only"></span>
+                </span>
+              </div>
+            </div>
+          </div> 
+        </section>
+      </main>
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script> <!-- add tweenmax js lib-->
+      <script src="js/jquery.js"></script><!-- add jquery -->
+      <script src="js/blog_home.js"></script> <!-- add this page's js-->
 </body>
