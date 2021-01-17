@@ -47,6 +47,10 @@ footer p{
   color: #e0e0e0;
 }
 
+img {
+  width: 60vmin;
+}
+
 #contact p {
   color: #3f3f3f;
   letter-spacing: 0.8px;
