@@ -64,11 +64,14 @@ strong {
   font-weight: 700;
 }
 
+#about,
 #contact {
   background: #ffffff;
 }
 
-
+#about{
+  padding-bottom: 100px;
+}
 #contact,
 footer {
   padding-top: 100px;
@@ -171,6 +174,27 @@ footer a:hover {
   fill: white;
   stroke: white;
   stroke-width: 0;
+}
+
+#about .btn {
+  background: transparent;
+  border: 3px solid #f1c11a;
+  border-radius: 0px;
+  color: #f1c11a;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 14px 36px;
+  margin-top: 62px;
+  margin-right: 16px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#about .btn:hover {
+  background: #f1c11a;
+  color: black;
+  border-color: transparent;
 }
 
 /* modal */
