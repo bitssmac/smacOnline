@@ -17,9 +17,16 @@ h1{
   text-align: center;
 }
 
+.batch-heading{
+  color: #a0a0a0;
+  text-shadow: 2px 2px #000000;
+  padding-top: 120px;
+  text-align: center;
+}
+
 .cards{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   padding: 60px;
   grid-gap: 40px;
 }
