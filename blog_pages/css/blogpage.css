@@ -43,6 +43,12 @@ h3 {
   line-height: 2rem;
 }
 
+h4 {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 footer p{
   color: #e0e0e0;
 }
