@@ -28,7 +28,7 @@ h1{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
   
-   padding: 60px;
+  padding: 60px;
   grid-gap: 40px;
 }
 .card{
@@ -127,6 +127,8 @@ img{
 .cards{
 grid-template-columns: repeat(2, minmax(10px,1fr));
 padding-bottom:0px;
+padding: 20px;
+grid-gap: 20px;
 }
 
 
