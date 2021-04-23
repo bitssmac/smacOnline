@@ -26,8 +26,9 @@ h1{
 
 .cards{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  padding: 60px;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  
+   padding: 60px;
   grid-gap: 40px;
 }
 .card{
@@ -75,7 +76,7 @@ img{
 .details>p{
   color: #a0a0a0;
   font-size: 15px;
-  line-height: 30px;
+
   font-weight: 400;
 }
 
@@ -120,4 +121,30 @@ img{
   .card:hover li:nth-child(4) .icon {
     transition-delay: 0.4s;
   }
+
+@media(max-width:540px){
+
+.cards{
+grid-template-columns: repeat(2, minmax(10px,1fr));
+padding-bottom:0px;
+}
+
+
+.card:hover .icon{
+transform:translateY(-50px);
+}
+.details{
+top:-50px;
+padding-bottom:0;
+}
+.details>h3{
+font-size:13px;
+}
+.details>p{
+font-size:11px;
+}
+h2{
+padding-top:60px;
+}
+}
 
