@@ -12,8 +12,8 @@ $(document).ready(function() {
   $(function() {
     $('body').vegas({
         slides: [
-            { src: 'images/slides/beginner1.jpeg' },
-            { src: 'images/slides/home-gym.jpg' }
+            { src: 'images/slides/manrunning.jpeg' },
+            { src: 'images/slides/girlwalking.png' }
         ],
         timer: false,
         transition: [ 'zoomOut', ]
