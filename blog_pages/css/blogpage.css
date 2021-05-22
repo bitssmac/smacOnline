@@ -324,6 +324,11 @@ footer a:hover {
   color: #111112;
 }
 
+ol, ul {
+  display: table;
+  margin: 0 auto;
+}
+
 /* Mobile Responsive */
 @media (max-width: 980px) {
 
