@@ -296,6 +296,7 @@ footer a:hover {
 
 /* social icon section  */
 .social-icon {
+  display: initial;
   padding: 0;
   margin: 0;
 }
