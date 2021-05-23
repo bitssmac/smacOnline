@@ -296,6 +296,7 @@ footer a:hover {
 
 /* social icon section  */
 .social-icon {
+  display: initial;
   padding: 0;
   margin: 0;
 }
@@ -322,6 +323,11 @@ footer a:hover {
 .social-icon li a:hover {
   background-color: #ffffff;
   color: #111112;
+}
+
+ol, ul {
+  display: table;
+  margin: 0 auto;
 }
 
 /* Mobile Responsive */
