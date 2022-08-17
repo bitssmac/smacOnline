@@ -3,19 +3,12 @@
 <head>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKBSQJ37CQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-EKBSQJ37CQ');
-  </script>
+  <!-- TODO: ADD My own analytics -->
 
 	<meta charset="utf-8">
 
-  <title>SMAC</title>
-  <link rel="shortcut icon" href="images/samc-logo.png" type="image/x-icon">
+  <title>Vighnesh</title>
+  <link rel="shortcut icon" href="images/vighnesh-logo-tiny.png" type="image/x-icon">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
@@ -33,6 +26,8 @@
   <link rel="stylesheet" href="css/index/vegas.min.css">
   <!-- for the loading circle-->
   <link rel="stylesheet" href="css/preloader/preloader.css">
+  <!-- for the cards -->
+  <link rel="stylesheet" href="css/cards.css">
 
 	<link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
 
@@ -64,10 +59,13 @@
 
 			<div class="col-md-offset-2 col-md-8 col-sm-12">
 				<div class="home-thumb">
-					<h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, we are SMAC</h1>
-          <h3 class="wow fadeInUp" data-wow-delay="0.6s">Safety and Medical Advisory Council</h3>
-          <a href="blog_home.html" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="0.8s">Blog</a>
-        	<a href="teamPage.html" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="1s">Team</a>
+					<h1 class="wow fadeInUp" data-wow-delay="0.4s">Vighnesh Natarajan Ganesh</h1>
+          <br>
+          <h4 class="wow fadeInUp" data-wow-delay="0.6s"> Goldman Sachs Summer Analyst, 2022 </h4>
+          <h4 class="wow fadeInUp" data-wow-delay="0.6s"> Visiting Researcher, London Business School </h4>
+          <h4 class="wow fadeInUp" data-wow-delay="0.6s"> BITS Pilani, Computer Science + Finance </h4>
+          <a href="pdfs/resume_data_science.pdf" target="_blank" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.8s">Resume</a>
+        	<a href="mailto:f20190131@pilani.bits-pilani.ac.in?cc=ngvighnesh@gmail.com" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">e-mail</a>
 				</div>
 			</div>
 
@@ -81,25 +79,61 @@
 		<div class="row">
 
       <div class="col-md-6 col-sm-12">
-        <img src="images/samc-logo.png" class="img-responsive wow fadeInUp" alt="About">
+        <img src="images/me/my-face-circle.png" class="img-responsive wow fadeInUp" alt="About">
       </div>
 
 			<div class="col-md-6 col-sm-12">
 				<div class="about-thumb">
 					<div class="section-title">
-						<h1 class="wow fadeIn" data-wow-delay="0.2s">WHO ARE WE?</h1>
-						<h3 class="wow fadeInUp" data-wow-delay="0.4s">A student body operating in BITS Pilani</h3>
+						<h1 class="wow fadeIn" data-wow-delay="0.2s">WHO AM I?</h1>
 					</div>
 					<div class="wow fadeInUp" data-wow-delay="0.6s">
-						<p>
-              The Safety & Medical Advisory Council is an autonomous student body surveying medical facilities, readiness, and safety and security issues on campus for the students and staff of BITS Pilani, Pilani campus. We are also responsible for the medical needs of any external students who attend our festivals, in addition to ensuring the safety standards of the college around the calendar
-            </p>
+						<table class="table table-hover">
+              <tr>
+                <td rowspan="1"> <B> Education </B> </td>
+                <td>B.E. in Computer Science Engineering, Minor In Finance</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><B>Industry Experience</B></td>
+                <td> Summer Analyst 2022 <em> Goldman Sachs </em> </td>
+              </tr>
+              <tr>
+                <td> Data Science Intern <em> LuMos, Silicon Valley (Social Media Startup) </em> </td>
+              </tr>
+              <tr>
+                <td> Intern <em> Bharat Electronics </em> </td>
+              </tr>
+              <tr>
+                <td rowspan="2"><B>Academic Experience</B></td>
+                <td> Visiting Researcher <em> London Business School </em> </td>
+              </tr>
+              <tr>
+                <td> Data Science for Social Good Fellow <em> University of Warwick</em></td>
+              </tr>
+              <tr>
+                <td rowspan="4"><B>Positions of Responsibility</B></td>
+                <td>President <em> Safety and Medical Advisory Council</em></td>
+              </tr>
+              <tr>
+                <td>ML Lead of Microsoft Ambassdors <em> Microsoft Learn Student Partners of BITS Pilani </em></td>
+              </tr>
+              <tr>
+                <td>Vice President of Membership <em> Toastmasters </em></td>
+              </tr>
+              <tr>
+                <td> Club Secratry <em> Pilani Tamil Mandram </em></td>
+              </tr>
+              <tr>
+                <td><B> Age </B></td>
+                <td class="text-monospace"><span id="myAge"></span></td>
+              </tr>
+            </table>
 					</div>
         </div>
       </div>
-      <div class="clearfix text-center col-md-12 col-sm-12">
-        <a href="teamPage.html" class="btn btn-default smoothScroll">Team</a>
-      </div>
+      <!-- <div class="clearfix text-center col-md-12 col-sm-12">
+        <a href="teamPage.html" class="btn btn-default smoothScroll">Resume</a>
+      </div> -->
     </div>
 	</div>
 </section>
@@ -107,82 +141,173 @@
 
 <!-- feature section -->
 <section id="feature">
+  
   <div class="container">
+
+    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+      <path d="M0 0 L50 100 L100 0 Z"></path>
+    </svg>
+
     <div class="row">
-      
-      <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
-        <path d="M0 0 L50 100 L100 0 Z"></path>
-      </svg>
-
-      <div class="col-md-4 col-sm-6">
+      <div class="col-lg-12 text-center">
         <div class="media wow fadeInUp" data-wow-delay="0.4s">
-          <div class="media-object media-left">
-            <i class="icon glyphicon-asterisk"></i>
-          </div>
           <div class="media-body">
-            <h2 class="media-heading">Fests</h2>
-            <p>We set up and maintain first aid camps and handle any medical emergency that may arise during OASIS and BOSM</p>
+            <h2 class="media-heading">Featured Expreiences</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 center-block">
+        <div class="media wow fadeInUp" data-wow-delay="0.5s">
+          <!-- <h4 class="text-center">Title</h4> -->
+          <div class="profile-card-4 text-center"><img src="images/companies/GS.png" class="img img-responsive">
+            <div class="profile-content">
+              <div class="profile-name">
+                Goldman Sachs
+                <div class="profile-subname">
+                  Summer Analyst
+                </div>
+              </div>           
+              <div class="profile-description">
+                Ideated and Organised the event that recorded the highest participation in the all-India Goldman Sachs Hackathon.
+                <br> <br>
+                Created new orchestrations, that will process Billions of Dollars in Personal Loans with better scalability.
+                <br> <br>
+                Minimized client loss by developing a command to restart the loan applications that fail due to production issues. 
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-6">
-        <div class="media wow fadeInUp" data-wow-delay="0.8s">
-          <div class="media-object media-left">
-            <i class="icon glyphicon-asterisk"></i>
-          </div>
-          <div class="media-body">
-            <h2 class="media-heading">Projects</h2>
-            <p>To ensure and improve the health and safety of all residents on the campus, we take up projects and organize voluntary donation drives</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="media wow fadeInUp" data-wow-delay="1.2s">
-          <div class="media-object media-left">
-            <i class="icon glyphicon-asterisk"></i>
-          </div>
-          <div class="media-body">
-            <h2 class="media-heading">Blog</h2>
-            <p>This website now has blogs on a range of topics to keep the BITSian community informed and updated</p>
+      <div class="col-md-4">
+        <div class="media wow fadeInUp" data-wow-delay="0.6s">
+          <!-- <h4 class="text-center">Title</h4> -->
+          <div class="profile-card-4 text-center"><img src="images/companies/LBS.jpg" class="img img-responsive">
+            <div class="profile-content">
+              <div class="profile-name">
+                London Business School
+                <div class="profile-subname">
+                  Visiting Researcher
+                </div>
+              </div>
+              <div class="profile-description">
+                Invited to model short-term energy markets in the UK and develop a trading algorithm.	
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      
-
-      <div class="clearfix text-center col-md-12 col-sm-12">
-        <a href="blog_home.html" class="btn btn-default smoothScroll">Blog</a>
+      <div class="col-md-4">
+        <div class="media wow fadeInUp" data-wow-delay="0.7s">
+          <!-- <h4 class="text-center">Title</h4> -->
+          <div class="profile-card-4 text-center"><img src="images/companies/Warwick.jpg" class="img img-responsive">
+            <div class="profile-content">
+              <div class="profile-name">
+                University of Warwick
+                <div class="profile-subname">
+                  DSSGx Fellow
+                </div>
+              </div>
+              <div class="profile-description">
+                Worked with The Federal Ministry for Economic Affairs and Energy of Germany.
+                <br> <br>
+                Developed multiple models (SARIMAX, VAR, deep neural networks) and incorporated auto machine learning in Python.
+                <br> <br>
+                Authored a chapter in the textbook: "Neue Dimensionen in Data Science", launch at Kunstmuseum, Germany Sep 2022.
+                <br> <br>
+                Worked on Streamlit to build an application to deploy the model with adequate abstraction for use by economists. 
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- contact section -->
+<!-- POR section -->
 <section id="contact">
 	<div class="container">
 		<div class="row">
 
 			<div class="col-md-offset-2 col-md-8 col-sm-12">
 				<div class="section-title">
-					<h1 class="wow fadeInUp" data-wow-delay="0.3s">Contact Us</h1>
-					<p class="wow fadeInUp" data-wow-delay="0.6s">This information will be made available during fests as the primary contact for medical emergencies and injuries <br>
-					Meanwhile, feel free to drop by any of our social media handles to reach out</p>
+					<h1 class="wow fadeInUp" data-wow-delay="0.3s">Positions of Responsibilities</h1>
+
+          <div class="">
+            <h3 class="wow fadeInUp text-left" data-wow-delay="0.4s">
+              <b>President |<em> Safety and Medical Advisory Council </em> </b>
+            </h3>
+            <p class="wow fadeInUp text-left" data-wow-delay="0.45s">
+              Coordinated <B>168 medical cases</B> including 4 emergencies with Birla Sarvajanik Hospital.
+              <br>
+              <B>Doubled</B> the yearly <B>registrations for DATRI</B> Stem Cell Registry from BITS with 150+ students registered.
+              <br>
+              Lead a team of 4 programmers and 2 writers to create a blog site
+              <br>
+              Organized first aid camps of BOSM, Oasis 2019.
+            </p>
+          </div>
+
+          <br><br>
+
+          <div>
+            <h3 class="wow fadeInUp text-right" data-wow-delay="0.4s">
+              <b>Vice-President of Membership |<em> Toastmasters </em> </b>
+            </h3>
+            <p class="wow fadeInUp text-right" data-wow-delay="0.45s">
+              <b> Doubled no. paying members</b> during my tenure.
+              <br>
+              <b> Quadrupled no. paying women members</b> by introducing a "Women in Toastmasters" drive.
+              <br>
+              <b> First</b> and one of only two members <b>to finish a Toastmaster Pathway</b> in BITS Pilani.
+              <br>
+              Achieved <b>Magical Leader</b> and <b>Triple Crown</b> Award from Toastmasters District 41.
+            </p>
+          </div>
+
+          <br><br>
+
+          <div>
+            <h3 class="wow fadeInUp text-left" data-wow-delay="0.4s">
+              <b>ML Lead of the Ambassdors |<em> Microsoft Learn Student Ambassdors Bits Pilani </em> </b>
+            </h3>
+            <p class="wow fadeInUp text-left" data-wow-delay="0.45s">
+              Lead a team of 20 Ambassadors for a year as their ML Lead 
+              <br>
+              Created open-source projects and learning pathways.
+              <br>
+              Conducted a workshop with Microsoft employees to teach BITS students about ML on the Cloud.
+              <br>
+              Organized and Spoke in a Talk with 150+ attendees. 
+            </p>
+          </div>
+
+          <br><br>
+
+          <div>
+            <h3 class="wow fadeInUp text-right" data-wow-delay="0.4s">
+              <b>Club Secratry |<em> Pilani Tamil Mandram (Regional Association) </em> </b>
+            </h3>
+            <p class="wow fadeInUp text-right" data-wow-delay="0.45s">
+              Organised multiple regional events including a musical performance in Tamil.
+            </p>
+          </div>
+
 				</div>
         <br>
         </p>
       </div>
+
     </div>
-    <!-- <div>
-      <h3 class="wow fadeInUP"> Name 1 </h3>
-      <h4 class="wow fadeInUp"> +91 9999999999</h4>
-    </div> -->
 	</div>
 </section>
 
-<!-- footer section -->
+<!-- Achievements and footer section -->
 <footer>
 	<div class="container">
 		<div class="row">
@@ -191,29 +316,41 @@
         <path d="M0 0 L50 100 L100 0 Z"></path>
       </svg>
 
+      <div class="row">
+        <div class="row text-center">
+          <h1>Other Achievemts</h1>
+        </div>
+        <div class="col center-block">
+          <div class="media wow fadeInUp" data-wow-delay="0.5s">
+            <!-- <h4 class="text-center">Title</h4> -->
+            <div class="profile-card-4 text-center"><img src="images/companies/guinness_darkened.jpg" class="img img-responsive">
+              <div class="profile-content">
+                <div class="profile-name">
+                  World Record
+                </div>           
+                <div class="profile-description">
+                  <b>
+                    Delivered a keyboard performance as a part of a Guiness World Record setting concert - "STOP CHILD LABOR" on labor day of 2017 
+                  </b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <div class="col-md-1 col-sm-1"></div>
 
+      <br><br><br><br>
       <div class="col-md-4 col-sm-5">
-        <h2>SMAC</h2>
+        <h2>Thank you!</h2>
         <p class="wow fadeInUp" data-wow-delay="0.6s">
           Also available at:
         </p>
         <ul class="social-icon">
-          <li><a href="https://www.linkedin.com/company/safety-medical-advisory-council-bits-pilani/" class="fa fa-linkedin wow bounceIn" data-wow-delay="0.9s"></a></li>
-          <li><a href="https://www.facebook.com/smac.bitspilani" class="fa fa-facebook wow bounceIn" data-wow-delay="0.9s"></a></li>
+          <li><a href="https://www.linkedin.com/in/vighnesh-ng/" class="fa fa-linkedin wow bounceIn" data-wow-delay="0.9s"></a></li>
+          <li><a href="mailto:f20190131@pilani.bits-pilani.ac.in?cc=ngvighnesh@gmail.com" class="fa fa-envelope wow bounceIn" data-wow-delay="0.9s"></a></li>
         </ul>
       </div>
-
-      <div class="col-md-4 col-sm-6">
-          <div class="wow fadeInUp" data-wow-delay="0.3s">
-            <h2></h2>
-            <p> official repo: </p>
-            <ul class="social-icon">
-            <li><a href="https://github.com/bitssmac/smacOnline" class="fa fa-github wow bounceIn" data-wow-delay="0.9s"></a></li>
-            </ul>
-          </div>
-      </div>
-
 		</div>
 	</div>
 </footer>
@@ -243,6 +380,7 @@
 <!-- javscript js -->
 <script src="js/jquery.js"></script>
 <script src="js/index/bootstrap.min.js"></script>
+<script src="js/age_clac.js"></script>
 
 <script src="js/index/vegas.min.js"></script>  <!-- along with jquery, is used for the slideshow-->
 

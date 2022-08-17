@@ -43,6 +43,20 @@ h3 {
   line-height: 2rem;
 }
 
+h4 {
+  line-height: 0.6;
+}
+
+table {
+  color: #000;
+  font-weight: 500;
+}
+
+em {
+  color: #242424;
+  font-weight: 200;
+}
+
 p {
   color: #828282;
   letter-spacing: 0.8px;
@@ -237,6 +251,21 @@ footer {
   background: #f1c11a;
 }
 
+#contact h3{
+  font-size: larger;
+  font: 'Rajdhani', sans-serif;
+  letter-spacing: normal;
+  color: #000;
+}
+
+#contact em{
+  color: #000;
+  font-weight: 200;
+}
+
+#contact p{
+  color: #000;
+}
 
 /* footer section  */
 footer {
