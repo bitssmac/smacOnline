@@ -251,6 +251,21 @@ footer {
   background: #f1c11a;
 }
 
+#contact h3{
+  font-size: larger;
+  font: 'Rajdhani', sans-serif;
+  letter-spacing: normal;
+  color: #000;
+}
+
+#contact em{
+  color: #000;
+  font-weight: 200;
+}
+
+#contact p{
+  color: #000;
+}
 
 /* footer section  */
 footer {
