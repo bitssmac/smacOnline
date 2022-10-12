@@ -2,11 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box; 
+    font-family: 'Poppins',sans-serif;
   }
   body{
     background-color: black;
     place-items: center center;
-    font-family: 'Poppins',sans-serif;
+ 
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
@@ -100,6 +101,13 @@
   
     font-weight: 400;
   }
+
+  .intro{
+    padding: 1vw;
+  }
+  .contact{
+    padding: 0.5vw;
+  }
   
     /**** Social Icons *****/
     .social-icons {
@@ -111,6 +119,13 @@
     .social-icons li {
       list-style: none;
     }
+
+    .bosm-heading{
+      text-align : center;
+      padding-bottom: 1vw;
+      margin-bottom: 1vw;
+    }
+
   
     .social-icons .icon{
       width: 60px;
@@ -142,6 +157,19 @@
     .card:hover li:nth-child(4) .icon {
       transition-delay: 0.4s;
     }
+
+    .bosm-body{
+        padding: 2vw 2vw;
+        width: 80vw;
+        /* height: 162.43vw; */
+        color: white;
+        height: auto;
+        margin : 5% auto;
+        box-sizing: border-box;
+        text-align: center;
+        background: #f1c11a;
+        border-radius: 20px;
+      }
   
   @media(max-width:540px){
   
@@ -168,7 +196,7 @@
   .details>p{
   font-size:11px;
   }
-  h2{
+  /* h2{
   padding-top:60px;
-  }
+  } */
   }
