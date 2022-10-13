@@ -1,202 +1,93 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box; 
-    font-family: 'Poppins',sans-serif;
-  }
-  body{
-    background-color: black;
-    place-items: center center;
- 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  
-  h1{
-    color: white;
-    padding-top: 120px;
-    text-align: center;
-  }
-  
-  .batch-heading{
-    color: #a0a0a0;
-    text-shadow: 2px 2px #000000;
-    padding-top: 120px;
-    text-align: center;
-  }
+body{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(48, 46, 46);
+  background-color: rgba(224, 217, 217, 0.863);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+}
+hr{
+  width: 80%;
+}
+h2{
+  font-size: 20px;
+}
+.contact-items{
+  display: flex;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  align-items: center;
 
-  .link-buttons{
-    background: white !important;
-    border: 3px solid #f1c11a !important;
-    border-radius: 0px;
-    color: #f1c11a !important;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 14px 36px;
-    margin-top: 62px;
-    margin-right: 16px;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-  }
+}
+.customer-care,.write-us,.sales-market{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28%;
+  margin: 30px auto;
+  padding: 35px 15px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 250px;
   
-  .link-buttons:hover{
-    background: #f1c11a !important;
-    color: white !important;
-    border-color: transparent !important;
-  }
-  
-  .cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-    
-    padding: 60px;
-    grid-gap: 40px;
-  }
-  .card{
-    overflow: hidden;
-    background-color: transparent;
-  }
-  
-  /* image of each card */
-  .profile-img{
-    position: relative;
-    transition: all 0.9s;
-    box-shadow: 0 0 30px rgba(0,0,0,0.18);
-  }
-  
-  .card:hover .profile-img{
-    background-color: black;
-    opacity: 20%;
-  }
-  
-  img{
-    /* set width to 100% to have reflexive images */
-    width: 100%;
-    display: block;
-    border-radius: 20px 20px 20px 20px;
-  }
-  
-  .details{
-    padding: 20px 10px;
-    width: 100%;
-    z-index: 1;
-  
-    /* the icons use up 60px, use the below 2 lines to hide it: */
-    position: relative;
-    top: -60px;
-  }
-  
-  
-  .details>h3{
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 18px;
-    margin: 10px 0 15px 0;
-  }
-  
-  .details>p{
-    color: #a0a0a0;
-    font-size: 15px;
-  
-    font-weight: 400;
-  }
+}
+.customer-care{
+  height: 250px;
+  box-shadow: 0 15px 15px green;
+  border: 1px solid green;
+}
+.write-us{
+  height: 250px;
+  box-shadow: 0 15px 15px red;
+  border: 1px solid red;
+}
+.sales-market{
+  height: 250px;
+  box-shadow: 0 15px 15px blue;
+  border: 1px solid blue;
+}
+p{
+  font-size: 15px;
+}
+button{
+  padding: 8px 16px;
+  font-size: 17px;
+  border-radius: 25px;
+  border: none;
+  margin: 15px auto;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+button:hover{
+  color: gray;
+}
+#cust-care{
+  background: green;
 
-  .intro{
-    padding: 1vw;
-  }
-  .contact{
-    padding: 0.5vw;
-  }
-  
-    /**** Social Icons *****/
-    .social-icons {
-      z-index: 2;
-      display: flex;
-      background-color: transparent;
-    }
-  
-    .social-icons li {
-      list-style: none;
-    }
+  box-shadow: 0 0 5px black;
+}
+#write{
+  background: rgb(187, 15, 15);
 
-    .bosm-heading{
-      text-align : center;
-      padding-bottom: 1vw;
-      margin-bottom: 1vw;
-    }
-
-  
-    .social-icons .icon{
-      width: 60px;
-      height: 60px;
-      transform: translateY(300px);
-      transition: 0.0s;
-      padding: 5px;
-    }
-  
-    .card:hover .icon{
-      width: 60px;
-      height: 60px;
-      transform: translateY(-200px);
-      transition: 1s ;
-    }
-    
-    .card:hover li:nth-child(1) .icon {
-      transition-delay: 0.1s;
-    }
-    
-    .card:hover li:nth-child(2) .icon {
-      transition-delay: 0.2s;
-    }
-    
-    .card:hover li:nth-child(3) .icon {
-      transition-delay: 0.3s;
-    }
-    
-    .card:hover li:nth-child(4) .icon {
-      transition-delay: 0.4s;
-    }
-
-    .bosm-body{
-        padding: 2vw 2vw;
-        width: 80vw;
-        /* height: 162.43vw; */
-        color: white;
-        height: auto;
-        margin : 5% auto;
-        box-sizing: border-box;
-        text-align: center;
-        background: #f1c11a;
-        border-radius: 20px;
-      }
-  
-  @media(max-width:540px){
-  
-  .cards{
-  grid-template-columns: repeat(2, minmax(10px,1fr));
-  padding-bottom:0px;
-  padding: 20px;
-  grid-gap: 20px;
-  }
-  .link-buttons{
-    font-size: 10px;
-  }
-  
-  .card:hover .icon{
-  transform:translateY(-50px);
-  }
-  .details{
-  top:-50px;
-  padding-bottom:0;
-  }
-  .details>h3{
-  font-size:13px;
-  }
-  .details>p{
-  font-size:11px;
-  }
-  /* h2{
-  padding-top:60px;
-  } */
-  }
+  box-shadow: 0 0 5px black;
+}
+#sales{
+  background: blue;
+  box-shadow: 0 0 5px black;
+}
+a{
+  font-size: 16px;
+}
+.customer-care a{
+  color: green;
+  text-shadow: 0 0 2px rgba(73, 129, 80, 0.637);
+}
+.sales-market a{
+  color: blue;
+  text-shadow: 0 0 2px rgba(76, 62, 158, 0.637);
+}
