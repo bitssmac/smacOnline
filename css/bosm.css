@@ -1,0 +1,93 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(48, 46, 46);
+  background-color: rgba(224, 217, 217, 0.863);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+}
+hr{
+  width: 80%;
+}
+h2{
+  font-size: 20px;
+}
+.contact-items{
+  display: flex;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+.customer-care,.write-us,.sales-market{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28%;
+  margin: 30px auto;
+  padding: 35px 15px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 250px;
+  
+}
+.customer-care{
+  height: 250px;
+  box-shadow: 0 15px 15px green;
+  border: 1px solid green;
+}
+.write-us{
+  height: 250px;
+  box-shadow: 0 15px 15px red;
+  border: 1px solid red;
+}
+.sales-market{
+  height: 250px;
+  box-shadow: 0 15px 15px blue;
+  border: 1px solid blue;
+}
+p{
+  font-size: 15px;
+}
+button{
+  padding: 8px 16px;
+  font-size: 17px;
+  border-radius: 25px;
+  border: none;
+  margin: 15px auto;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+button:hover{
+  color: gray;
+}
+#cust-care{
+  background: green;
+
+  box-shadow: 0 0 5px black;
+}
+#write{
+  background: rgb(187, 15, 15);
+
+  box-shadow: 0 0 5px black;
+}
+#sales{
+  background: blue;
+  box-shadow: 0 0 5px black;
+}
+a{
+  font-size: 16px;
+}
+.customer-care a{
+  color: green;
+  text-shadow: 0 0 2px rgba(73, 129, 80, 0.637);
+}
+.sales-market a{
+  color: blue;
+  text-shadow: 0 0 2px rgba(76, 62, 158, 0.637);
+}

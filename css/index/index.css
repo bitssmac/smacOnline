@@ -54,6 +54,8 @@ strong {
   font-weight: 700;
 }
 
+
+
 #about,
 #feature,
 #contact {
@@ -89,6 +91,9 @@ footer {
   backface-visibility: hidden;
 }
 
+.bosm-button{
+  padding: 14px 36px;
+}
 
 /* home section */
 #home {
@@ -161,6 +166,27 @@ footer {
 }
 
 #about .btn:hover {
+  background: #f1c11a;
+  color: black;
+  border-color: transparent;
+}
+
+.bosm-button{
+  background: transparent;
+  border: 3px solid #f1c11a;
+  border-radius: 0px;
+  color: #f1c11a;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 14px 36px;
+  margin-top: 62px;
+  margin-right: 16px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.bosm-button:hover{
   background: #f1c11a;
   color: black;
   border-color: transparent;
